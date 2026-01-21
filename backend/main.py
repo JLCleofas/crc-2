@@ -11,3 +11,7 @@ async def root():
 @app.get("/hello/{name}")
 async def say_hello(name: str):
     return {"message": f"Hello {name}"}
+
+@app.get("/health", status_code=200, description="Health check")
+async def health():
+    return {"health": "ok"}
