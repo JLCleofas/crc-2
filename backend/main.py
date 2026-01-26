@@ -21,6 +21,10 @@ templates = Jinja2Templates(directory="backend/templates")
 async def root(request: Request):
     return  templates.TemplateResponse("base.html", {"request": request})
 
+@app.get("/home")
+async def home(request: Request):
+    return templates.TemplateResponse("pages/home.html", {"request": request})
+
 
 @app.get("/hello/{name}")
 async def say_hello(name: str):
