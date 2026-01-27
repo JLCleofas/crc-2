@@ -24,7 +24,8 @@ async def root(request: Request):
 
 @app.get("/home")
 async def home(request: Request):
-    return templates.TemplateResponse("pages/home.html", {"request": request})
+    theme_color = request.cookies.get("theme")
+    return templates.TemplateResponse("pages/home.html", {"request": request, "theme_color": theme_color})
 
 @app.post("/theme")
 async def set_theme(request: Request, theme: str = Form(...)):
