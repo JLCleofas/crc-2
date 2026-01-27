@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "npx @tailwindcss/cli -i ./styles/app.css -o ../backend/static/css/app.css --watch",
-    "build:css": "npx @tailwindcss/cli -i ./styles/app.css -o ../backend/static/css/app.css"
+    "build:css": "npx @tailwindcss/cli -i ./styles/app.css -o ../backend/static/css/app.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.18",
