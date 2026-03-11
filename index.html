@@ -1,114 +1,462 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Louie Cleofas - Cloud Resume</title>
-</head>
-<body>
-    <h1>John Louie Cleofas</h1>
-    <p>I am an aspiring AI Engineer and Software Engineer.</p>
-    <h2>Professional Experience</h2>
-    <h3>Application Support - Questronix Corporation, February 2026 - Present</h3>
-    <ul>
-        <li>Provide technical support to the users of the client's AI Chatbot application.</li>
-        <li>Shadow the development team to understand the application and the codebase.</li>
-        <li>Shadow the DevOps team to understand the infrastructure and the deployment process.</li>
-    </ul>
-    <h4>Technology Exposure</h4>
-    <ul>
-        <li>AI Chatbots</li>
-        <li>RAG</li>
-        <li>LLMs</li>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>Rancher</li>
-        <li>Kubernetes</li>
-        <li>Longhorn</li>
-        <li>ClickHouse</li>
-        <li>GPUStack</li>
-        <li>Docker</li>
-        <li>Unix</li>
-    </ul>
-    <h3>IT Support Engineer/IoT Engineer - KDDI Philippines Corporation, September 2024 - February 2026</h3>
-    <ul>
-        <li>Provide technical support to the users of the client's IT infrastructure and IoT devices.</li>
-        <li>Perform hardware preventive maintenance and repairs for server, storage, and network equipment.</li>
-        <li>Designed and developed internal tools and automation using Power Automate and Power Apps.</li>
-    </ul>
-    <h4>Technology Exposure</h4>
-    <ul>
-        <li>Power Automate</li>
-        <li>Power Apps</li>
-        <li>Raspberry Pi</li>
-        <li>Windows Server</li>
-        <li>NAS</li>
-        <li>Firewall</li>
-    </ul>
-    <h3>Software Quality Assurance/Tester - Baytech BPO Corporation, July 2023 - August 2023</h3>
-    <ul>
-        <li>Performed manual testing for the company's web applications.</li>
-        <li>Reported and documented the issues and the defects found during the testing process.</li>
-        <li>Worked with the development team to fix the issues and the defects.</li>
-        <li>Exposure to LLMs, text-to-image models, and other AI tools.</li>
-    </ul>
-    <h4>Technology Exposure</h4>
-    <ul>
-        <li>Manual Testing</li>
-        <li>LLMs</li>
-        <li>Stable Diffusion</li>
-        <li>OpenAI</li>
-    <h2>Skills</h2>
-    <h3>Programming</h3>
-    <ul>
-        <li>Python (PCEP and PCAP certified)</li>
-        <li>FastAPI</li>
-        <li>SQL</li>
-    </ul>
-    <h3>Cloud</h3>
-    <ul>
-        <li>Amazon Web Services (AWS) - Certified Cloud Practitioner</li>
-        <li>S3</li>
-        <li>DynamoDB</li>
-        <li>IAM</li>
-        <li>CloudFront</li>
-        <li>Route 53</li>
-        <li>ACM</li>
-    </ul>
-    <h3>DevOps</h3>
-    <ul>
-        <li>Kubernetes</li>
-        <li>Docker</li>
-        <li>Unix</li>
-    </ul>
-    <h3>AI</h3>
-    <ul>
-        <li>OpenAI</li>
-        <li>Dify</li>
-        <li>Ollama</li>
-        <li>LLMs</li>
-        <li>RAG</li>
-    </ul>
-    <h3>Tools</h3>
-    <ul>
-        <li>Git</li>
-        <li>GitHub</li>
-        <li>NeoVIM</li>
-        <li>Cursor</li>
-        <li>Power Automate</li>
-        <li>Power Apps</li>
-    </ul>
-    <h2>Certifications</h2>
-    <ul>
-        <li>Amazon Web Services (AWS) - Certified Cloud Practitioner</li>
-        <li>Python (PCEP and PCAP certified)</li>
-        <li>Cybersecurity (Fortinet Certified Fundamentals in Cybersecurity and Fortinet Certified Associate in Cybersecurity)</li>
-    </ul>
-    <h2>Education</h2>
-    <ul>
-        <li>Bachelor of Science in Electronics Engineering Major in Data Science</li>
-        <li>Graduated: 2024</li>
-        <li>Technological Institute of the Philippines - Quezon City</li>
-    </ul>
-</body>
+
+    <!-- Tailwind CDN (works standalone or as a prototype for a full build) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              retro: {
+                // Base background
+                bg: "#ECE3CA",
+                // Card/background surfaces
+                card: "#FFFFFF",
+                // Accent (borders, labels, lines)
+                accent: "#D08700",
+                // Softer accent background
+                accentSoft: "#FFE4B8",
+                // Main content color
+                ink: "#793205",
+                // Primary highlight background
+                primary: "#FF9FA0",
+                // Primary content color (assumed #801518)
+                primaryInk: "#801518",
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      @media print {
+        body {
+          background: #ffffff !important;
+        }
+
+        .no-print-shadow {
+          box-shadow: none !important;
+        }
+
+        .no-print-bg {
+          background: #ffffff !important;
+        }
+
+        .page-shell {
+          max-width: 100% !important;
+          padding: 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-retro-bg text-retro-ink antialiased">
+    <main
+      class="page-shell max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12 flex flex-col gap-6 md:gap-7"
+    >
+      <!-- Header -->
+      <header
+        class="no-print-shadow bg-retro-card/90 border border-retro-accent/40 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7 flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between"
+      >
+        <div class="space-y-1.5">
+          <h1
+            class="text-3xl md:text-4xl font-extrabold tracking-tight text-retro-ink"
+          >
+            John Louie Cleofas
+          </h1>
+          <p
+            class="inline-flex items-center gap-2 text-sm md:text-base font-medium uppercase tracking-[0.2em] text-retro-ink/70"
+          >
+            <span
+              class="h-[1px] w-6 bg-retro-accent/80 rounded-full md:w-8"
+            ></span>
+            AI Engineer &amp; Software Engineer
+          </p>
+        </div>
+        <p
+          class="text-sm md:text-base leading-relaxed text-retro-ink/80 max-w-md md:text-right"
+        >
+          Aspiring AI and software engineer with hands-on experience across
+          application support, DevOps, cloud, and modern AI tooling, focused on
+          building reliable, human-centric systems.
+        </p>
+      </header>
+
+      <!-- Main content cards -->
+      <section
+        aria-labelledby="experience-heading"
+        class="no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
+      >
+        <div class="flex items-baseline justify-between gap-3 mb-4 md:mb-5">
+          <h2
+            id="experience-heading"
+            class="text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
+          >
+            Professional Experience
+          </h2>
+        </div>
+
+        <div class="space-y-5 md:space-y-6 divide-y divide-slate-200/70">
+          <!-- Questronix -->
+          <article
+            class="pt-0 first:pt-0 md:grid md:grid-cols-[minmax(0,2.2fr)_minmax(0,3fr)] md:gap-6"
+          >
+            <header class="mb-3 md:mb-0">
+              <h3 class="text-base md:text-lg font-semibold text-retro-ink">
+                Application Support
+              </h3>
+              <p class="text-sm font-medium text-retro-ink/75">
+                Questronix Corporation
+              </p>
+              <p class="text-xs uppercase tracking-[0.18em] text-retro-ink/60 mt-1">
+                February 2026 – Present
+              </p>
+            </header>
+            <div class="space-y-3">
+              <ul
+                class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80"
+              >
+                <li>
+                  Provide technical support to users of the client&apos;s AI
+                  chatbot application.
+                </li>
+                <li>
+                  Shadow the development team to understand the application and
+                  codebase.
+                </li>
+                <li>
+                  Shadow the DevOps team to understand the infrastructure and
+                  deployment process.
+                </li>
+              </ul>
+              <div class="space-y-1.5">
+                <p class="text-xs font-semibold tracking-[0.2em] text-slate-500">
+                  Technology Exposure
+                </p>
+                <div
+                  class="flex flex-wrap gap-1.5 text-xs font-medium text-retro-ink"
+                >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-primary text-retro-primaryInk border border-retro-primaryInk/20"
+                    >AI Chatbots</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-primary text-retro-primaryInk border border-retro-primaryInk/20"
+                    >RAG</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-primary text-retro-primaryInk border border-retro-primaryInk/20"
+                    >LLMs</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-accentSoft text-retro-ink border border-retro-accent/40"
+                    >Python</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-accentSoft text-retro-ink border border-retro-accent/40"
+                    >SQL</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/50 text-retro-ink border border-retro-ink/10"
+                    >Rancher</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/50 text-retro-ink border border-retro-ink/10"
+                    >Kubernetes</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/50 text-retro-ink border border-retro-ink/10"
+                    >Longhorn</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/50 text-retro-ink border border-retro-ink/10"
+                    >ClickHouse</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/40 text-retro-ink border border-retro-ink/10"
+                    >GPUStack</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/40 text-retro-ink border border-retro-ink/10"
+                    >Docker</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/40 text-retro-ink border border-retro-ink/10"
+                    >Unix</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- KDDI -->
+          <article
+            class="pt-5 md:pt-6 md:grid md:grid-cols-[minmax(0,2.2fr)_minmax(0,3fr)] md:gap-6"
+          >
+            <header class="mb-3 md:mb-0">
+              <h3 class="text-base md:text-lg font-semibold text-retro-ink">
+                IT Support Engineer / IoT Engineer
+              </h3>
+              <p class="text-sm font-medium text-retro-ink/75">
+                KDDI Philippines Corporation
+              </p>
+              <p class="text-xs uppercase tracking-[0.18em] text-retro-ink/60 mt-1">
+                September 2024 – February 2026
+              </p>
+            </header>
+            <div class="space-y-3">
+              <ul
+                class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80"
+              >
+                <li>
+                  Provided technical support to users of the client&apos;s IT
+                  infrastructure and IoT devices.
+                </li>
+                <li>
+                  Performed hardware preventive maintenance and repairs for
+                  server, storage, and network equipment.
+                </li>
+                <li>
+                  Designed and developed internal tools and automation using
+                  Power Automate and Power Apps.
+                </li>
+              </ul>
+              <div class="space-y-1.5">
+                <p class="text-xs font-semibold tracking-[0.2em] text-slate-500">
+                  Technology Exposure
+                </p>
+                <div
+                  class="flex flex-wrap gap-1.5 text-xs font-medium text-retro-ink"
+                >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-primary text-retro-primaryInk border border-retro-primaryInk/20"
+                    >Power Automate</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-primary text-retro-primaryInk border border-retro-primaryInk/20"
+                    >Power Apps</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-accentSoft text-retro-ink border border-retro-accent/40"
+                    >Raspberry Pi</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/40 text-retro-ink border border-retro-ink/10"
+                    >Windows Server</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/40 text-retro-ink border border-retro-ink/10"
+                    >NAS</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/40 text-retro-ink border border-retro-ink/10"
+                    >Firewall</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Baytech -->
+          <article
+            class="pt-5 md:pt-6 md:grid md:grid-cols-[minmax(0,2.2fr)_minmax(0,3fr)] md:gap-6"
+          >
+            <header class="mb-3 md:mb-0">
+              <h3 class="text-base md:text-lg font-semibold text-retro-ink">
+                Software Quality Assurance / Tester
+              </h3>
+              <p class="text-sm font-medium text-retro-ink/75">
+                Baytech BPO Corporation
+              </p>
+              <p class="text-xs uppercase tracking-[0.18em] text-retro-ink/60 mt-1">
+                July 2023 – August 2023
+              </p>
+            </header>
+            <div class="space-y-3">
+              <ul
+                class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80"
+              >
+                <li>
+                  Performed manual testing for the company&apos;s web
+                  applications.
+                </li>
+                <li>
+                  Reported and documented issues and defects found during the
+                  testing process.
+                </li>
+                <li>
+                  Collaborated with the development team to resolve issues and
+                  defects.
+                </li>
+                <li>
+                  Gained exposure to LLMs, text-to-image models, and other AI
+                  tools.
+                </li>
+              </ul>
+              <div class="space-y-1.5">
+                <p class="text-xs font-semibold tracking-[0.2em] text-slate-500">
+                  Technology Exposure
+                </p>
+                <div
+                  class="flex flex-wrap gap-1.5 text-xs font-medium text-retro-ink"
+                >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-white/40 text-retro-ink border border-retro-ink/10"
+                    >Manual Testing</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-primary text-retro-primaryInk border border-retro-primaryInk/20"
+                    >LLMs</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-accentSoft text-retro-ink border border-retro-accent/40"
+                    >Stable Diffusion</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-full bg-retro-accentSoft text-retro-ink border border-retro-accent/40"
+                    >OpenAI</span
+                  >
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section
+        aria-labelledby="skills-heading"
+        class="no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
+      >
+        <div class="flex items-baseline justify-between gap-3 mb-4 md:mb-5">
+          <h2
+            id="skills-heading"
+            class="text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
+          >
+            Skills
+          </h2>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 md:gap-5">
+          <div class="space-y-2.5">
+            <h3 class="text-sm font-semibold text-retro-ink">Programming</h3>
+            <ul
+              class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80"
+            >
+              <li>Python (PCEP and PCAP certified)</li>
+              <li>FastAPI</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="space-y-2.5">
+            <h3 class="text-sm font-semibold text-retro-ink">Cloud</h3>
+            <ul
+              class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80"
+            >
+              <li>Amazon Web Services (AWS) - Certified Cloud Practitioner</li>
+              <li>S3</li>
+              <li>DynamoDB</li>
+              <li>IAM</li>
+              <li>CloudFront</li>
+              <li>Route 53</li>
+              <li>ACM</li>
+            </ul>
+          </div>
+          <div class="space-y-2.5">
+            <h3 class="text-sm font-semibold text-retro-ink">DevOps</h3>
+            <ul
+              class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80"
+            >
+              <li>Kubernetes</li>
+              <li>Docker</li>
+              <li>Unix</li>
+            </ul>
+          </div>
+          <div class="space-y-2.5">
+            <h3 class="text-sm font-semibold text-retro-ink">AI</h3>
+            <ul
+              class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80"
+            >
+              <li>OpenAI</li>
+              <li>Dify</li>
+              <li>Ollama</li>
+              <li>LLMs</li>
+              <li>RAG</li>
+            </ul>
+          </div>
+          <div class="space-y-2.5 md:col-span-2">
+            <h3 class="text-sm font-semibold text-retro-ink">Tools</h3>
+            <ul
+              class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80"
+            >
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>NeoVIM</li>
+              <li>Cursor</li>
+              <li>Power Automate</li>
+              <li>Power Apps</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Certifications & Education -->
+      <section class="grid gap-6 md:grid-cols-2">
+        <section
+          aria-labelledby="certifications-heading"
+          class="no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
+        >
+          <div
+            class="flex items-baseline justify-between gap-3 mb-4 md:mb-5"
+          >
+            <h2
+              id="certifications-heading"
+              class="text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
+            >
+              Certifications
+            </h2>
+          </div>
+          <ul
+            class="list-disc list-inside text-sm leading-relaxed text-retro-ink/80 space-y-1.5"
+          >
+            <li>Amazon Web Services (AWS) - Certified Cloud Practitioner</li>
+            <li>Python (PCEP and PCAP certified)</li>
+            <li>
+              Cybersecurity (Fortinet Certified Fundamentals in Cybersecurity
+              and Fortinet Certified Associate in Cybersecurity)
+            </li>
+          </ul>
+        </section>
+
+        <section
+          aria-labelledby="education-heading"
+          class="no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
+        >
+          <div
+            class="flex items-baseline justify-between gap-3 mb-4 md:mb-5"
+          >
+            <h2
+              id="education-heading"
+              class="text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
+            >
+              Education
+            </h2>
+          </div>
+          <div class="space-y-1.5 text-sm leading-relaxed text-retro-ink/80">
+            <p class="font-semibold text-retro-ink">
+              Bachelor of Science in Electronics Engineering Major in Data
+              Science
+            </p>
+            <p class="text-retro-ink/70">Graduated: 2024</p>
+            <p>Technological Institute of the Philippines - Quezon City</p>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>
