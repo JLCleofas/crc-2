@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Louie Cleofas - Cloud Resume</title>
 
-    <!-- Tailwind CDN (works standalone or as a prototype for a full build) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./styles.css" />
 
     <script>
       tailwind.config = {
@@ -15,54 +15,33 @@
             colors: {
               retro: {
                 // Base background
-                bg: "#ECE3CA",
+                bg: "#111827",
                 // Card/background surfaces
-                card: "#FFFFFF",
+                card: "#1F2937",
                 // Accent (borders, labels, lines)
-                accent: "#D08700",
+                accent: "#818CF8",
                 // Softer accent background
-                accentSoft: "#FFE4B8",
+                accentSoft: "#312E81",
                 // Main content color
-                ink: "#793205",
+                ink: "#FFFFFF",
                 // Primary highlight background
-                primary: "#FF9FA0",
-                // Primary content color (assumed #801518)
-                primaryInk: "#801518",
+                primary: "#6366F1",
+                // Primary content color
+                primaryInk: "#FFFFFF",
               },
             },
           },
         },
       };
     </script>
-
-    <style>
-      @media print {
-        body {
-          background: #ffffff !important;
-        }
-
-        .no-print-shadow {
-          box-shadow: none !important;
-        }
-
-        .no-print-bg {
-          background: #ffffff !important;
-        }
-
-        .page-shell {
-          max-width: 100% !important;
-          padding: 0 !important;
-        }
-      }
-    </style>
   </head>
-  <body class="min-h-screen bg-retro-bg text-retro-ink antialiased">
+  <body class="theme-page min-h-screen bg-retro-bg text-retro-ink antialiased">
     <main
       class="page-shell max-w-4xl mx-auto px-4 md:px-8 py-8 md:py-12 flex flex-col gap-6 md:gap-7"
     >
       <!-- Header -->
       <header
-        class="no-print-shadow bg-retro-card/90 border border-retro-accent/40 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7 flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between"
+        class="theme-card no-print-shadow bg-retro-card/90 border border-retro-accent/40 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7 flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between"
       >
         <div class="space-y-1.5">
           <h1
@@ -114,12 +93,12 @@
       <!-- Main content cards -->
       <section
         aria-labelledby="experience-heading"
-        class="no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
+        class="theme-card no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
       >
         <div class="flex items-baseline justify-between gap-3 mb-4 md:mb-5">
           <h2
             id="experience-heading"
-            class="text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
+            class="section-label text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
           >
             Professional Experience
           </h2>
@@ -159,7 +138,7 @@
                 </li>
               </ul>
               <div class="space-y-1.5">
-                <p class="text-xs font-semibold tracking-[0.2em] text-slate-500">
+                <p class="text-xs font-semibold tracking-[0.2em] text-gray-400">
                   Technology Exposure
                 </p>
                 <div
@@ -251,7 +230,7 @@
                 </li>
               </ul>
               <div class="space-y-1.5">
-                <p class="text-xs font-semibold tracking-[0.2em] text-slate-500">
+                <p class="text-xs font-semibold tracking-[0.2em] text-gray-400">
                   Technology Exposure
                 </p>
                 <div
@@ -323,7 +302,7 @@
                 </li>
               </ul>
               <div class="space-y-1.5">
-                <p class="text-xs font-semibold tracking-[0.2em] text-slate-500">
+                <p class="text-xs font-semibold tracking-[0.2em] text-gray-400">
                   Technology Exposure
                 </p>
                 <div
@@ -355,12 +334,12 @@
       <!-- Skills -->
       <section
         aria-labelledby="skills-heading"
-        class="no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
+        class="theme-card no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
       >
         <div class="flex items-baseline justify-between gap-3 mb-4 md:mb-5">
           <h2
             id="skills-heading"
-            class="text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
+            class="section-label text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
           >
             Skills
           </h2>
@@ -432,14 +411,14 @@
       <section class="grid gap-6 md:grid-cols-2">
         <section
           aria-labelledby="certifications-heading"
-          class="no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
+          class="theme-card no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
         >
           <div
             class="flex items-baseline justify-between gap-3 mb-4 md:mb-5"
           >
             <h2
               id="certifications-heading"
-              class="text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
+              class="section-label text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
             >
               Certifications
             </h2>
@@ -458,14 +437,14 @@
 
         <section
           aria-labelledby="education-heading"
-          class="no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
+          class="theme-card no-print-shadow bg-retro-card/95 border border-retro-accent/30 rounded-2xl shadow-sm px-5 py-6 md:px-7 md:py-7"
         >
           <div
             class="flex items-baseline justify-between gap-3 mb-4 md:mb-5"
           >
             <h2
               id="education-heading"
-              class="text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
+              class="section-label text-xs font-semibold uppercase tracking-[0.3em] text-retro-accent"
             >
               Education
             </h2>
